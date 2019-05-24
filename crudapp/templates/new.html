@@ -33,12 +33,12 @@
 
                 <div class="row mx-auto">
                     <div class="col-6 mx-auto">
-
+                        {% load crispy_forms_tags %}
                         <div class="form-group">
                             <form method="POST" enctype="multipart/form-data" novalidate>
                                 {% csrf_token%}
                                     <table>
-                                        {{form.as_table}}
+                                        {{form|crispy}}
                                     </table>
                                 <div class="text-right">
                                     <input class="btn btn-dark text-center" type = "submit" value = "submit">

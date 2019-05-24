@@ -27,12 +27,13 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'y#@tlaq#4g@3k5k0scrf(#k)oc!wd5
 # DEBUG = True
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'crispy_forms',
     'crudapp.apps.CrudappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
