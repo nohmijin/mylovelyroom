@@ -9,11 +9,11 @@ class Post(models.Model):
     
     title = models.CharField(max_length=200)
     content = models.TextField()
-    file = models.FileField(null=True)
+    image = models.ImageField(upload_to='images/') 
     bill = models.IntegerField(default=0)
     pet = models.BooleanField(default=True)
     address2 = models.CharField(max_length=50, default="예) 서울시 강북구 수유동")
-    file2 = models.FileField(null=True)
+    agreement = models.ImageField(upload_to='images/') 
 
     created_at = models.DateTimeField(auto_now_add=True) #만든시간
     updated_at = models.DateTimeField(auto_now=True) #수정시간

@@ -4,7 +4,7 @@ html, body {
 
 nav {
     font-size: 1.25rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gothic A1', sans-serif;
 }
 .navbar-light {
     transition:500ms ease;
@@ -38,7 +38,7 @@ footer {
 
 .head_text h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #77AAAD;
     padding-bottom: 0.5rem;
     font-weight: bold;
@@ -50,12 +50,8 @@ footer {
     color: white;
 }
 
-.head_text hr {
-    border-color: white;
-}
-
 .head_text p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gothic A1', sans-serif;
     text-align: center;
 }
 

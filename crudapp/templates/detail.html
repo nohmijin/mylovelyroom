@@ -38,7 +38,7 @@
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                             <h6 class="my-0">{{ post.sex }}</h6>
-                            <small class="text-muted">호스트 나이</small>
+                            <small class="text-muted">호스트 성별</small>
                         </div>
                         <span class="text-muted">★</span>
                     </li>
@@ -52,11 +52,13 @@
                 </ul>
                 
                 <div class="dropdown dropleft">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        전대차 동의계약 여부 확인하기
+                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        전대차 동의인증서
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <img class="dropdown-item" src="{{ post.file2.url }}" style="max-width: 100%;max-height: 100%;">
+                        {% if post.agreement %}
+                        <img class="dropdown-item" src="{{ post.agreement.url }}" alt="이미지를 찾을 수 없습니다" style="max-width: 100%;max-height: 100%;">
+                        {% endif %}
                     </div>
                 </div>
 
@@ -66,7 +68,9 @@
             <!--방 정보-->
             <div id="room-info" class="col-md-8 order-md-1">
                 <h4 class="text mb-3 text-muted">Room Info.</h4>
-                <img src="{{ post.file.url }}" style="max-width: 100%;max-height: 100%;">
+                {% if post.agreement %}
+                <img src="{{ post.image.url }}" alt="이미지를 찾을 수 없습니다" style="max-width: 100%;max-height: 100%;">
+                {% endif %}
                 <br><br>
                 <ul class="list-group mb-3">
 
