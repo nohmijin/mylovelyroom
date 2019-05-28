@@ -10,6 +10,12 @@ def main(request):
     posts = Post.objects
     return render(request, 'main.html', {'posts':posts})
 
+def example(request):
+    return render(request, 'example.html')
+
+def example2(request):
+    return render(request, 'example2.html')
+
 def detail(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
     return render(request, 'detail.html', {'post':post})
